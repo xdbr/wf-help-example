@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  div(ng-controller='MainCtrl')
+    h1= title
+    p Welcome to #{title}
+
+    form.well(name='inputForm')
+      input#query(type='text', name='query', ng-model='query', placeholder='type your search here', autofocus)
+      button.btn.btn-primary#submit(type='submit', ng-click='submitQuery') search
+
+    h2(ng-show='activeView=="help"') Help section
+    div(ng-show='activeView=="help"', ng-repeat='help in helpSections')
+      h3 {{help.title}}
+      button.btn.btn-default(ng-repeat='item in help.examples', tooltip='{{item.explanation}}', tooltip-trigger='mouseenter', ng-click='setQuery(item.query)') {{item.query}}
+      a#details(href='', ng-init='isCollapsed = true', ng-click="isCollapsed = !isCollapsed") Details
+      hr
+      div(collapse="isCollapsed")
+        div.well
+          table.table.table-striped.table-hover
+            tr
+              th(ng-repeat='item in help.details.headings') {{item}}
+            tr(ng-repeat='items in help.details.rows')
+              td(ng-repeat='item in items') {{item}}
+
+
+    h2(ng-show='activeView=="search"') Results section
+    div(ng-show='activeView=="search"')
+      button(ng-click='activeView="help"') Back to examples
+      ul(ng-repeat='theitem in fakeResults')
+        li#results {{theitem}}

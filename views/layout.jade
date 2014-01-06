@@ -1,0 +1,13 @@
+doctype html
+html(ng-app='wf-help-example')
+  head
+    title= title
+    script(src="components/angular/angular.min.js")
+    script(src="components/angular-bootstrap/ui-bootstrap-tpls.min.js")
+    script(src="/angular/app.js")
+    script(src="/angular/controllers/main.js")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
+
+  body
+    block content

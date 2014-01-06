@@ -1,0 +1,1 @@
+var app = angular.module('wf-help-example', ['ui.bootstrap']);
