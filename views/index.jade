@@ -6,7 +6,7 @@ block content
     p Welcome to #{title}
 
     form.well(name='inputForm')
-      input#query(type='text', name='query', ng-model='query', placeholder='type your search here', autofocus)
+      input#query(type='text', name='query', ng-model='query', placeholder='type your search here', selectize="{ delimiter: ' ', persist: true, create: true, highlight: true, openOnFocus: false, plugins: ['remove_button', 'restore_on_backspace', 'drag_drop'] }", autofocus)
       button.btn.btn-primary#submit(type='submit', ng-click='submitQuery(query)') search
 
     h2(ng-show='activeView=="help"') Help section

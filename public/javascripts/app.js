@@ -1,1 +1,1 @@
-var app = angular.module('wf-help-example', ['ui.bootstrap']);
+var app = angular.module('wf-help-example', ['ui.bootstrap', 'ui.sortable', 'theaquaNg']);
