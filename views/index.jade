@@ -7,7 +7,7 @@ block content
 
     form.well(name='inputForm')
       input#query(type='text', name='query', ng-model='query', placeholder='type your search here', autofocus)
-      button.btn.btn-primary#submit(type='submit', ng-click='submitQuery') search
+      button.btn.btn-primary#submit(type='submit', ng-click='submitQuery(query)') search
 
     h2(ng-show='activeView=="help"') Help section
     div(ng-show='activeView=="help"', ng-repeat='help in helpSections')

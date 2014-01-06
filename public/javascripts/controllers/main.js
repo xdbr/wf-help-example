@@ -49,6 +49,11 @@ app.controller('MainCtrl', function($scope) {
     // you could fire off a query here and make the help section fold away
     // $scope.activeView = 'search';
   };
+
+  $scope.submitQuery = function(query) {
+    console.log('searching for query = ' + query);
+    $scope.activeView = 'search';
+  };
   
   $scope.fakeResults = ['foo', 'bar'];
 });
