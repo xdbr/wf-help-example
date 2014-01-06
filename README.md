@@ -3,6 +3,14 @@ wf-help-example
 
 This is a quick stub/draft to illustrate, what the wf-help section could potentially look like.
 
+Check out the live demo here: <http://wf.labs.codeedition.de/>
+
+Prerequisites
+-------------
+
+* Node (and thus, npm)
+* bower
+
 Installation / Test drive
 -------------------------
 
