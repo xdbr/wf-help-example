@@ -1,0 +1,3 @@
+[submodule "vendor/ui-sortable"]
+	path = vendor/ui-sortable
+	url = git@github.com:angular-ui/ui-sortable.git

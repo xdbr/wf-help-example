@@ -19,6 +19,10 @@
     "bootstrap": "~3.0.3",
     "angularjs": "*",
     "jquery": "~2.0.3",
-    "ng-selectize": "*"
+    "ng-selectize": "*",
+    "angular-ui-sortable": "~0.10.0"
+  },
+  "resolutions": {
+    "selectize": "0.8.5"
   }
 }

@@ -23,6 +23,7 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/components', express.static(__dirname + '/app/bower_components'));
 app.use('/components', express.static(__dirname + '/bower_components'));
+app.use('/components', express.static(__dirname + '/vendor'));
 app.use('/angular', express.static(__dirname + '/public/javascripts'));
 app.use('/angular/controllers', express.static(__dirname + '/public/javascripts/controllers'));
 
